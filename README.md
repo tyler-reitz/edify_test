@@ -12,7 +12,7 @@ npm install
 ```
 
 ```
-nmp start
+npm start
 ```
 
 [http://localhost:3000/](http://localhost.com:3000)
