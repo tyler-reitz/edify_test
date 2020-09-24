@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import Characters from './Characters';
+import Character from './Character';
 import './App.css';
 
+export const NetworkContext = React.createContext(null)
+
 function App() {
+  const [delay, setDelay] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NetworkContext.Provider value={{ delay, setDelay }}>
+        <Router>
+          <Switch>
+            <Route exact path="/characters" component={Characters} />
+            <Route path="/character/:characterId" component={Character} />
+            <Redirect from="/" to="/characters" />
+          </Switch>
+        </Router>
+      </NetworkContext.Provider>
     </div>
   );
 }
