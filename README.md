@@ -1,6 +1,6 @@
 # Edify Test
 
-![edify_test](https://github.com/tyler-reitz/edify_test/edify_test.png?raw=true)
+![edify_test](https://raw.githubusercontent.com/tyler-reitz/edify_test/master/edify_test.png)
 
 ```
 git clone https://github.com/tyler-reitz/edify_test.git
