@@ -14,4 +14,5 @@ npm install
 nmp start
 ```
 
-[localhost](http://localhost.com)
+visit
+[http://localhost:3000/](http://localhost.com:3000)
