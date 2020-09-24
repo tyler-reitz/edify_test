@@ -14,14 +14,11 @@ const CharacterList = () => {
   }
 
   return (
-    <div>
-      <h1>Rick & Morty Characters</h1>
-      <ul>
-        {response?.results?.map(character => (
-          <CharacterListItem {...character} key={character.id} />
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {response?.results?.map(character => (
+        <CharacterListItem {...character} key={character.id} />
+      ))}
+    </ul>
   )
 }
 
